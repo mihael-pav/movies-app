@@ -1,0 +1,27 @@
+<ng-container *ngIf="movieData">
+  <a class="item" [routerLink]="'/movie/' + movieData.id">
+    <div class="item-rating">
+      <i class="icon">star</i>
+      <span>{{ movieData.vote_average }}</span
+      >/10
+    </div>
+    <div class="item-image">
+      <img [src]="imageSizes.medium + movieData.poster_path" [alt]="movieData.title" />
+    </div>
+    <div class="item-title">{{ movieData.title }}</div>
+  </a>
+</ng-container>
+
+<ng-container *ngIf="tvData">
+  <a class="item" [routerLink]="'/tv/' + tvData.id">
+    <div class="item-rating">
+      <i class="icon">star</i>
+      <span>{{ tvData.vote_average }}</span
+      >/10
+    </div>
+    <div class="item-image">
+      <img [src]="imageSizes.medium + tvData.poster_path" [alt]="tvData.title" />
+    </div>
+    <div class="item-title">{{ tvData.title }}</div>
+  </a>
+</ng-container>
